@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>RG</title>
+	<style>
+	div {
+}
+</style>
+	</head>
+	
+	<body>
+	<center>
+	<h3>HOME PAGE </h3>
+	<br>
+	</center>
+
+	
+	<div><a href="Home.html">HOME</a>&nbsp;<a href="Registration.html">REGISTRATION FORM</a></div>
+	
+<html>
+    <head>
+        <title>Homepage</title>
+         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    </head>
+<body>  
+    <div class="header">
+    <nav class="navbar navbar-style">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a href="https://www.iiit.ac.in/"><img class="logo" src="https://www.iiit.ac.in/img/iiit-new.png"
+" align="left" width=70px;>
+            </div>
+        </div>
+        </div>
+    </nav>
+<div class="container">
+<div class="row">
+    <div class="col-sm-6 banner-info">
+        <h3>MY DETAILS</h3>
+        <table style="width:70px" class="table table-hover" id="tab">
+    <tr>
+        <td>NAME:</td>
+        <td>MINSU</td>
+    </tr>
+    <tr>
+        <td>COLLEGE:</td>
+        <td>Centurian University</td>
+    </tr>
+    <tr>
+        <td>REASON:</td>
+        <td>To learn coding and improve my programming skills </td>
+    </tr>
+    </table>
+    </div>
+    <div class="col-sm-6 banner-image">
+        <img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s640/facebook-default-no-profile-pic.jpg" width:"300" height="100" 
+style="float:right"/>
+    </div>
+    </div>
+    </div>
+<div class="col-sm-6 banner-info">
+  <div id="par" > <p class="bg-primary text-white">RDIP is Remote Digital Internship Program to help students learn/improve HTML,CSS,JavaScript</p></div>
+<div>
+<p id="para">In the first week of internship I have learned about basics of HTML and how to create github,html,css pages and connection between html and css webpages and their uses</p> 
+</div>
+<button id="Hide">Hide</button>
+</div>
+<button>Send an HTTP GET request to a page and get the result back</button>
+<script>
+$( "#hider" ).click(function() {
+  $( "#para" ).hide( "fast", function() {
+    $( this ).prev().hide( "fast", arguments.callee );
+  });
+});
+$( "#shower" ).click(function() {
+  $( "#para" ).show( 2000 );
+});
+$(document).ready(function(){
+    $('#fadeout').click(function(){
+        $('#tab').fadeOut(3000);
+    });
+});
+$(document).ready(function(){
+    $('#fadein').click(function(){
+        $('#tab').fadeIn(5000);
+    });
+});
+$(document).ready(function(){
+    $('#fadetoggle').click(function(){
+        $('#tab').fadeToggle("slow");
+    });
+});
+$(document).ready(function(){
+    $('#fadeto').click(function(){
+        $('#tab').fadeTo(3000,0.2);
+    });
+});
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("a.asp", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+</body>
+<html>
