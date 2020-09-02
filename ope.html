@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h3>A demonstration of how to use operators</h3>
+
+<table id="TABLE">
+  <tr>
+    <td>BMI</td>
+    <th>95</th>
+  </tr>
+  <tr>
+    <td>SBI</td>
+    <th>92</th>
+  </tr>
+   <td>NBT</td>
+   <th>94</th>
+  </tr> 
+</table>
+
+
+<button onclick="window.print()">Print</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("TABLE");
+  x.deleteRow(0);
+}
+</script>
+
+</body>
+</html>
