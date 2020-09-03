@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#London {background-color:grey;}
+#Paris {background-color:lightgreen;}
+#Seoul{background-color:lightblue;}
+#Berlin {background-color:purple;}
+</style>
+</head>
+<body>
+
+<p>Click on the capitals inside the tabbed menu:</p>
+
+<div id="London" class="tabcontent">
+  <h1>London</h1>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h1>Paris</h1>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Seoul" class="tabcontent">
+  <h1>Seoul</h1>
+  <p>Seoul is the capital of South Korea.</p>
+</div>
+
+<div id="Berlin" class="tabcontent">
+  <h1>Berlin</h1>
+  <p>Berlin is the capital of Germany.</p>
+</div>
+
+<button class="tablink" onclick="openCity('London', this, 'grey')" id="defaultOpen">London</button>
+<button class="tablink" onclick="openCity('Paris', this, 'lightgreen')">Paris</button>
+<button class="tablink" onclick="openCity('Seoul', this, 'lightblue')">Seoul</button>
+<button class="tablink" onclick="openCity('Berlin', this, 'purple')">Berlin</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>
